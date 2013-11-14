@@ -8,6 +8,7 @@ class CreateCustomers < ActiveRecord::Migration
       t.string :country
       t.string :postal_code
       t.string :email
+      t.integer :province_id
 
       t.timestamps
     end
