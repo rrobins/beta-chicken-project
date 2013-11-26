@@ -1,4 +1,10 @@
 BetaChickenProject::Application.routes.draw do
+   root :to => 'main#index', :via => :get
+
+  get "main/index"
+
+  get "main/category"
+
   resources :categories
 
 

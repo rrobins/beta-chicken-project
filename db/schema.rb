@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131124020223) do
+ActiveRecord::Schema.define(:version => 20131126012116) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -63,6 +63,7 @@ ActiveRecord::Schema.define(:version => 20131124020223) do
     t.string   "email"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.integer  "province_id"
   end
 
   create_table "lineitems", :force => true do |t|
@@ -70,6 +71,8 @@ ActiveRecord::Schema.define(:version => 20131124020223) do
     t.decimal  "price"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "product_id"
+    t.integer  "order_id"
   end
 
   create_table "orders", :force => true do |t|
@@ -77,8 +80,9 @@ ActiveRecord::Schema.define(:version => 20131124020223) do
     t.decimal  "pst_rate"
     t.decimal  "gst_rate"
     t.decimal  "hst_rate"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.integer  "customer_id"
   end
 
   create_table "products", :force => true do |t|

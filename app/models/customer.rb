@@ -4,5 +4,5 @@ class Customer < ActiveRecord::Base
 
   validates :first_name, :last_name, :postal_code, presence: true
 
-  attr_accessible :address, :city, :country, :email, :first_name, :last_name, :postal_code, :province_id
+  attr_accessible :address, :city, :country, :email, :first_name, :last_name, :postal_code
 end

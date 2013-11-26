@@ -3,5 +3,5 @@ class Order < ActiveRecord::Base
   has_many :products, :through => :line_items
   belongs_to :customer
 
-  attr_accessible :gst_rate, :hst_rate, :pst_rate, :status
+  attr_accessible :gst_rate, :hst_rate, :pst_rate, :status, :customer_id
 end
