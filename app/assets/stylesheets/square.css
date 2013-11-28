@@ -1,0 +1,112 @@
+html{
+	background-color: black;
+}
+
+body{
+	margin:0px auto;
+	width:700px;
+	color:black;
+}
+
+header, section, footer, #content{
+	background:#FFF;
+	border:1px solid red;
+	margin:10px;
+	padding-left:3px;
+	padding-right:3px;
+}
+
+
+#navigation{
+	padding: none;
+	margin:0px auto;
+	border:none;
+}
+
+#navigationTwo{
+	padding: none;
+	margin:0px auto;
+	border:none;
+}
+
+
+#navigation > nav ul li{
+	width:100%;
+	color:red;
+	height:18px;
+	text-align:center;
+	font-size:20px;
+	padding-left: 60px;
+}
+
+#navigationTwo > nav ul li{
+	width:100%;
+	color:#000;
+	height:18px;
+	text-align:center;
+	font-size:12px;
+	padding-left: 80px;
+}
+
+nav > ul{
+	display:inline;
+	list-style:none;
+}
+
+nav > ul li{
+	display:inline;
+	padding:0px 10px;
+}
+
+nav > ul li a{
+	text-decoration:none;
+}
+
+nav > ul li a:hover, nav > ul li a:focus{
+	text-decoration:none;
+	color:#000;
+}
+
+td > img{
+	width:85px;
+}
+
+table {
+  border-collapse: collapse;
+}
+table td, table th {
+  border: 1px solid black;
+}
+table tr:first-child th {
+  border-top: 0;
+}
+table tr:last-child td {
+  border-bottom: 0;
+}
+table tr td:first-child,
+table tr th:first-child {
+  border-left: 0;
+}
+table tr td:last-child,
+table tr th:last-child {
+  border-right: 0;
+}
+
+section > img{
+	width:200px;
+	float:left;
+	position:relative;
+	top:-40px;
+	left:-20px;
+
+}
+
+div > img{
+	width:670px;
+	padding-top:60px;
+}
+
+footer > p{
+	padding-top:0px;
+	font-size:10px;
+}

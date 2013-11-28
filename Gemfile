@@ -28,6 +28,8 @@ gem "jquery-rails", "< 3.0.0"
 
 gem 'country-select'
 
+gem 'kaminari'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

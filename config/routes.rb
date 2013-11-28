@@ -1,5 +1,5 @@
 BetaChickenProject::Application.routes.draw do
-   root :to => 'main#index', :via => :get
+   root :to => 'products#index', :via => :get
 
   get "main/index"
 

@@ -158,6 +158,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   country-select
   jquery-rails (< 3.0.0)
+  kaminari
   rails (= 3.2.13)
   sass-rails (~> 3.2.3)
   sqlite3
