@@ -12,4 +12,14 @@ class MainController < ApplicationController
   def show_product
   	@product = Product.find(params[:id])
   end
+
+  def search
+    # No code is required here.
+  end # Automatically loads app/views/store/search.html.erb
+  
+  def search_results
+  	@categories = Category.all
+    # Here we will be using the Product model to actually search.
+    @products = Product.where("name LIKE ?", "%#{params[:keywords]}%")
+  end
 end

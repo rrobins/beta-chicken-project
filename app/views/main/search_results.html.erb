@@ -19,7 +19,12 @@
 		</section>
 	</header>
 	<div id = "content">
+		<h2>Search Results</h2>
 		<table>
+			<% if @products.empty? %>
+  					<p>Sorry your search for '<%= params[:keywords] %>' returned no results.</p>
+			<% end %>
+
 			<%= render @products %>
 		</table>
 	</div>
@@ -27,7 +32,7 @@
 		<section id = "navigationTwo">
 		<nav>
 			<ul>
-					<li>Home</li>
+					<li><%= link_to "Home", "/" %></li>
 					<li>Products</li>
 					<li>About Us</li>
 					<li>Contact Us</li>

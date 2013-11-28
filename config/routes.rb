@@ -4,6 +4,11 @@ BetaChickenProject::Application.routes.draw do
    match 'product/:id' => 'main#show_product', :as => :show_product, :via => :get
    match 'category/:id' => 'main#category_search', :as => :category_search, :via => :get
 
+   match 'search' => 'main#search', :as => 'search', :via => :get
+  
+  match 'search_results' => 'main#search_results',
+        :as => 'search_results', :via => :post
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
