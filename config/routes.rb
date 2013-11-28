@@ -1,11 +1,7 @@
 BetaChickenProject::Application.routes.draw do
-   root :to => 'products#index', :via => :get
+   root :to => 'main#index', :via => :get
 
-  get "main/index"
-
-  get "main/category"
-
-  resources :categories
+   match 'product/:id' => 'main#show_product', :as => :show_product, :via => :get
 
 
   devise_for :admin_users, ActiveAdmin::Devise.config
