@@ -1,7 +1,7 @@
 class MainController < ApplicationController
   def index
   	@products = Product.order("name")
-  	@categories = Category.order("id")
+  	@categories = Category.all
   end
 
   def category
