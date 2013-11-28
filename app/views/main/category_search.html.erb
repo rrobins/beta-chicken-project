@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+	<title>BetaChickenCurling</title>
+	<%= stylesheet_link_tag    "square", :media => "all" %>
+</head>
+<body>
+	<header>
+		<h1>Beta Chicken Curling</h1>
+	<section id = "navigation">
+		<nav>
+				<ul>
+					<%= render @categories %>
+				</ul>
+		</nav>
+		</section>
+	</header>
+	<div id = "content">
+		<table>
+			<%= render @products %>
+		</table>
+	</div>
+	<footer>
+		<section id = "navigationTwo">
+		<nav>
+			<ul>
+					<li><%= link_to "Home", "/" %></li>
+					<li>Products</li>
+					<li>About Us</li>
+					<li>Contact Us</li>
+			</ul>		
+		</nav>
+		</section>
+
+	</footer>
+</body>
+</html>

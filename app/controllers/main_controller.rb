@@ -4,8 +4,9 @@ class MainController < ApplicationController
   	@categories = Category.all
   end
 
-  def category
-  	@categories = Category.order("id")
+  def category_search
+  	@categories = Category.all
+  	@products = Product.where("category_id = " + params[:id])
   end
 
   def show_product
