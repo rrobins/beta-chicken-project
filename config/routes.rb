@@ -6,8 +6,7 @@ BetaChickenProject::Application.routes.draw do
 
    match 'search' => 'main#search', :as => 'search', :via => :get
   
-  match 'search_results' => 'main#search_results',
-        :as => 'search_results', :via => :post
+  match 'search_results' => 'main#search_results', :as => 'search_results', :via => :post
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)

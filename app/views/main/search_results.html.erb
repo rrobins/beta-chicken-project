@@ -1,11 +1,8 @@
-<html lang="en">
-<head>
-	<title>BetaChickenCurling</title>
+
 	<%= stylesheet_link_tag    "square", :media => "all" %>
-</head>
-<body>
+
 	<header>
-		<h1>Beta Chicken Curling</h1>
+		<h1><%= image_tag "logo.jpg", :width => '50', :height => '50' %>Beta Chicken Curling</h1>
 		<%= form_tag search_results_path do %>
 		<%= text_field_tag :keywords %>
 		<%= submit_tag "search" %>
@@ -33,7 +30,6 @@
 		<nav>
 			<ul>
 					<li><%= link_to "Home", "/" %></li>
-					<li>Products</li>
 					<li>About Us</li>
 					<li>Contact Us</li>
 			</ul>		
@@ -41,5 +37,4 @@
 		</section>
 
 	</footer>
-</body>
-</html>
+

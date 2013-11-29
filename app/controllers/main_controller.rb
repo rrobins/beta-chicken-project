@@ -10,6 +10,7 @@ class MainController < ApplicationController
   end
 
   def show_product
+  	@categories = Category.all
   	@product = Product.find(params[:id])
   end
 
