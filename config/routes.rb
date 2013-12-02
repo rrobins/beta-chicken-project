@@ -1,4 +1,7 @@
 BetaChickenProject::Application.routes.draw do
+  resources :carts
+
+
    root :to => 'main#index', :via => :get
 
    match 'product/:id' => 'main#show_product', :as => :show_product, :via => :get
