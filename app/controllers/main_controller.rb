@@ -20,8 +20,9 @@ class MainController < ApplicationController
   
   def search_results
   	@categories = Category.all
+    search_category = Category.where("name LIKE ?", "%#{params[:keywords]}%")
     # Here we will be using the Product model to actually search.
-    @products = Product.where("name LIKE ?", "%#{params[:keywords]}%")
+    @products = Product.where("name LIKE ? OR category_id = ?", "%#{params[:keywords]}%", "%#{search_category[0].id}")
   end
 
   private
@@ -38,18 +39,20 @@ class MainController < ApplicationController
       product = Product.find(params[:product_id])
       @line_item = @cart.line_items.build(:product => product)
 
-      redirect :action => :index
 
       respond_to do |format|
         if @line_item.save
           format.html { redirect_to(@line_item.cart, :notice => 'Line item was created.')}
           format.xml { render :xml => @line_item, status => :created, :location => @line_item }
+
         else
           format.html { render :action => "new" }
           format.xml { render :xml => @line_item.errors, :status => :unprocessable_entity }
         end
 
       end
+
+      redirect :action => :index
 
   end
 
