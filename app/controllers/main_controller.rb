@@ -32,5 +32,25 @@ class MainController < ApplicationController
     session[:cart_id] = cart.id
     cart
   end
-  
+
+  def new_line_item
+      @cart = current_cart
+      product = Product.find(params[:product_id])
+      @line_item = @cart.line_items.build(:product => product)
+
+      redirect :action => :index
+
+      respond_to do |format|
+        if @line_item.save
+          format.html { redirect_to(@line_item.cart, :notice => 'Line item was created.')}
+          format.xml { render :xml => @line_item, status => :created, :location => @line_item }
+        else
+          format.html { render :action => "new" }
+          format.xml { render :xml => @line_item.errors, :status => :unprocessable_entity }
+        end
+
+      end
+
+  end
+
 end

@@ -7,6 +7,8 @@ BetaChickenProject::Application.routes.draw do
    match 'product/:id' => 'main#show_product', :as => :show_product, :via => :get
    match 'category/:id' => 'main#category_search', :as => :category_search, :via => :get
 
+   match 'new_line_item' => 'main#new_line_item', :as => :new_line_item, :via => :post
+
    match 'search' => 'main#search', :as => 'search', :via => :get
   
   match 'search_results' => 'main#search_results', :as => 'search_results', :via => :post

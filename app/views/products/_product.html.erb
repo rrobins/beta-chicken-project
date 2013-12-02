@@ -9,6 +9,7 @@
           <h3><%= link_to product.name, show_product_path(product) %></h3>
           <p><%= product.description %></p>
           <p>Category: <%= product.category.name %></p>
+          <%= button_to 'Add to Cart', new_line_item_path(:product_id => product) %>
       </td>
       <td><%= number_to_currency product.price %></td>
   </tr>
