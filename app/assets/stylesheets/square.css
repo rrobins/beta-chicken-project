@@ -8,7 +8,15 @@ body{
 	color:black;
 }
 
+form{
+	padding-bottom: 10px;
+	padding-left: 50px;
+}
 
+.pagination{
+	margin:0px auto;
+	padding-left: 250px;
+}
 
 header, section, footer, #content{
 	background:#FFF;
